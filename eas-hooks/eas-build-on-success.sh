@@ -4,6 +4,10 @@ set -eox pipefail
 
 ANDROID_EMULATOR=pixel_4
 
+export UPDATES_HOST=$(ifconfig -l | xargs -n1 ipconfig getifaddr)
+export UPDATES_PORT=4747
+export PROJECT_ROOT=$PWD
+
 if [[ "$EAS_BUILD_PLATFORM" == "android" ]]; then
   # Start emulator
   $ANDROID_SDK_ROOT/emulator/emulator @$ANDROID_EMULATOR -no-audio -no-boot-anim -no-window -use-system-libs 2>&1 >/dev/null &

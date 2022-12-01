@@ -10,8 +10,8 @@ const { copyAssetToStaticFolder, copyBundleToStaticFolder } = require('./utils/u
 const SERVER_HOST = process.env.UPDATES_HOST;
 const SERVER_PORT = parseInt(process.env.UPDATES_PORT || '', 10);
 
-const projectRoot = process.cwd()
-const updateDistPath = path.join(projectRoot, 'dist');
+const projectRoot = process.env.PROJECT_ROOT || process.cwd()
+const updateDistPath = path.join(projectRoot, 'updates');
 const platform = process.env.DETOX_CONFIGURATION.split('.')[0];
 
 const RUNTIME_VERSION = '1.0.0';
