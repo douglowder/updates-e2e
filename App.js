@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 const RETRY_COUNT = 5;
-const HOSTNAME = '192.168.1.233';
+const HOSTNAME = 'localhost';
 const PORT = '4747';
 
 async function sendLog(obj) {

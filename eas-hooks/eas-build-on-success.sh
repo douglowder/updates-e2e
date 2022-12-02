@@ -4,7 +4,8 @@ set -eox pipefail
 
 ANDROID_EMULATOR=pixel_4
 
-export UPDATES_HOST=$(ifconfig -l | xargs -n1 ipconfig getifaddr)
+#export UPDATES_HOST=$(ifconfig -l | xargs -n1 ipconfig getifaddr)
+export UPDATES_HOST=localhost
 export UPDATES_PORT=4747
 export PROJECT_ROOT=$PWD
 

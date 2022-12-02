@@ -38,6 +38,6 @@ jukgUoXm23DHaiqjbEGt&#xD;
     <key>EXUpdatesRuntimeVersion</key>
     <string>1.0.0</string>
     <key>EXUpdatesURL</key>
-    <string>http://192.168.1.233:4747/update</string>
+    <string>http://localhost:4747/update</string>
   </dict>
 </plist>
