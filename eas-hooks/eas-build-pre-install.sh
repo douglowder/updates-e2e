@@ -2,7 +2,7 @@
 
 set -eox pipefail
 
-if [[ "$EAS_BUILD_RUNNER" == "eas-build" && "$EAS_BUILD_PROFILE" == "preview" ]]; then
+if [[ "$EAS_BUILD_RUNNER" == "eas-build" && "$EAS_BUILD_PROFILE" == "updates_testing" ]]; then
   if [[ "$EAS_BUILD_PLATFORM" == "android" ]]; then
     sudo apt-get --quiet update --yes
 

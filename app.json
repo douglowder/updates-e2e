@@ -33,7 +33,8 @@
     },
     "runtimeVersion": "1.0.0",
     "plugins": [
-      "expo-updates"
+      "expo-updates",
+      "@config-plugins/detox"
     ],
     "extra": {
       "eas": {

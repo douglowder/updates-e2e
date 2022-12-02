@@ -12,7 +12,7 @@
         "buildConfiguration": "Debug"
       }
     },
-    "preview": {
+    "updates_testing": {
       "android": {
         "gradleCommand": ":app:assembleRelease :app:assembleAndroidTest -DtestBuildType=release",
         "withoutCredentials": true

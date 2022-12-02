@@ -22,14 +22,17 @@ if [[ "$EAS_BUILD_PLATFORM" == "android" ]]; then
     counter=$((counter + 1))
   done
 
-  if [[ "$EAS_BUILD_PROFILE" == "preview" ]]; then
+  # Ensure emulator can reach the local updates server
+  adb reverse tcp:4747 tcp:4747
+
+  if [[ "$EAS_BUILD_PROFILE" == "updates_testing" ]]; then
     detox test --configuration android.release --headless
   fi
 
   # Kill emulator
   adb emu kill
 else
-  if [[  "$EAS_BUILD_PROFILE" == "preview" ]]; then
+  if [[  "$EAS_BUILD_PROFILE" == "updates_testing" ]]; then
     detox test --configuration ios.release --headless
   fi
 fi
