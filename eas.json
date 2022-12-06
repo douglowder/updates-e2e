@@ -20,7 +20,8 @@
       "ios": {
         "simulator": true
       },
-      "distribution": "internal"
+      "distribution": "internal",
+      "buildArtifactPaths": ["logs/detox-tests.log"]
     },
     "production": {}
   },
