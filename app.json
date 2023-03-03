@@ -15,16 +15,38 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "dev.expo.updatese2e"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "dev.expo.updatese2e"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "owner": "expo-ci",
+    "runtimeVersion": "1.0.0",
+    "jsEngine": "hermes",
+    "plugins": [
+      "expo-updates",
+      "@config-plugins/detox"
+    ],
+    "updates": {
+      "url": "http://localhost:4747/update",
+      "codeSigningCertificate": "./certs/certificate.pem",
+      "codeSigningMetadata": {
+        "keyid": "main",
+        "alg": "rsa-v1_5-sha256"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "55685a57-9cf3-442d-9ba8-65c7b39849ef"
+      }
     }
   }
 }
